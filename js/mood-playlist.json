@@ -42,7 +42,7 @@
           "id": "2",
           "src": "./image/mood/rain-2.png",
           "link": "https://youtu.be/SNJbQ1SM6TU?si=Bw4aI8B1IW2udtJ7",
-          "lp-txt": "☔️ 비 내리는 숲속 카페 | 감성 팝",
+          "lp-txt": "☔️비 내리는 숲속 카페",
           "modal-list": [
             "Left in the Silence",
             "The Right Words Too Late",
@@ -68,7 +68,7 @@
           "id": "3",
           "src": "./image/mood/rain-3.png",
           "link": "https://youtu.be/SNJbQ1SM6TU?si=Bw4aI8B1IW2udtJ7",
-          "lp-txt": "Playlist ☔피할 수 없다면 즐겨라",
+          "lp-txt": "☔피할 수 없다면 즐겨라",
           "modal-list": [
             "소나기 - 이클립스",
             "비가 그치면 - Hoody",
@@ -92,7 +92,7 @@
           "id": "4",
           "src": "./image/mood/rain-4.png",
           "link": "https://youtu.be/Gu00H2ypeQY?si=cdtu-D53bnXUVai5",
-          "lp-txt": "[Playlist] 숲, 비 그리고 클래식☔️",
+          "lp-txt": "숲, 비 그리고 클래식☔️",
           "modal-list": "#음악 #플레이리스트 #classic #playlist #rain" 
         },
         {
@@ -108,7 +108,7 @@
           "id": "6",
           "src": "./image/mood/calm-1.png",
           "link": "https://youtu.be/ifN68yBUyUs?si=ZzQ2cZcD2Dl7h0i7",
-          "lp-txt": "잔잔한게 듣고싶어서 만든 플레이리스트",
+          "lp-txt": "잔잔한게 듣고싶어 만든 플리",
           "modal-list": [
             "서랍 - 10CM",
             "이 밤을 빌려 말해요(바른연애 길잡이) - 10CM",
@@ -163,7 +163,7 @@
           "id": "7",
           "src": "./image/mood/calm-2.png",
           "link": "https://www.youtube.com/watch?v=NY47mqz4yCg&list=PLp8fMXPrGEYuuvNOFo9gZI2AfyEL_0QH0",
-          "lp-txt": "그냥 틀어놓기만 해도 분위기 좋아지는 플리",
+          "lp-txt": "그냥 틀어놓기만 해도 분위기 좋은 플리",
           "modal-list": [
             "Too Good to Let Go",
             "Driftin'",
@@ -328,7 +328,7 @@
           "id": "11",
           "src": "./image/mood/clean-1.png",
           "link": "https://youtu.be/X5v7q7p5t1k?si=l7X3EpcGcNQHi6Gn",
-          "lp-txt": "날도 좋은데 미뤘던 방 청소나 해볼까",
+          "lp-txt": "날도 좋은데 미뤘던 방청소나 해볼까",
           "modal-list": [
             "Fall In Love Alone - Stacey Ryan",
             "You Got Me All Lost - Wildson",
@@ -374,7 +374,7 @@
           "id": "12",
           "src": "./image/mood/clean-2.png",
           "link": "https://youtu.be/fj8ReY0HxWc?si=ZENKABErG4YlnCpH",
-          "lp-txt": "산책하기 좋은날엔🌿 적당히 신나는 청량 플리",
+          "lp-txt": "산책하기 좋은날엔🌿 청량 플리",
           "modal-list": [
             "You Got Me All Lost - Wildson",
             "Balloons - I'MIN",
@@ -397,7 +397,7 @@
           "id": "13",
           "src": "./image/mood/clean-3.png",
           "link": "https://youtu.be/MkGKJNiYn-U?si=xkaPV7ODyeTj9IwH",
-          "lp-txt": "청춘을 노래하는 사람들 | 청량한 노래 모음",
+          "lp-txt": "청량한 노래 모음",
           "modal-list": [
             "Timeline - Kris Main",
             "Running - 가호",
@@ -437,7 +437,7 @@
           "id": "14",
           "src": "./image/mood/sports-1.png",
           "link": "https://youtu.be/T0pZ4BkAEvA?si=Aa5VIlEn1dzOirJ2",
-          "lp-txt": "러닝할땐 케이팝으로 케이던스 맞춰야지",
+          "lp-txt": "러닝할땐 케이팝으로 맞춰야지",
           "modal-list": [
             "한 페이지가 될 수 있게 - 데이식스",
             "낭만고양이 - 체리필터",
@@ -508,7 +508,7 @@
             "Speed Me Up - Wiz Khalifa, Ty Dolla $ign, Lil Yachty, Sueco",
             "top gun - bbno$",
             "WORLD KEEP TURNING - Pertinence",
-            "We Didn’t Start The Fire - Fall Out Boy",
+            "We Didn't Start The Fire - Fall Out Boy",
             "Hey Ya! - OutKast",
             "Goodness Gracious - BABY GRAVY, Yung Gravy, bbno$",
             "Fireman & Dancer - Royal Republic",
@@ -531,9 +531,9 @@
         },        
         {
           "id": "16",
-          "src": "./image/mood/sports-1.png",
+          "src": "./image/mood/sports-3.png",
           "link": "https://youtu.be/4Gs_eIjjR2A?si=12LJwBGxqiwyMNAM",
-          "lp-txt": "“체육관에 틀 쌈뽕한 음악 없어?” 해서 만든 플리",
+          "lp-txt": "“체육관에 틀 쌈뽕한 음악 없어?”",
           "modal-list": [
             "Voltage Flow",
             "Flex Game",
@@ -570,7 +570,7 @@
           "id": "17",
           "src": "./image/mood/summer-1.png",
           "link": "https://youtu.be/MfQDOh1o2Bo?si=MNbaNX0hXLHIcQ3T",
-          "lp-txt": "Summer Playlist 한국의 찐여름 바이브🌞",
+          "lp-txt": "Summer 한국의 찐여름 바이브🌞",
           "modal-list": [
             "비행기 - 거북이",
             "냉면 - 명카드라이브",
@@ -622,7 +622,7 @@
           "id": "18",
           "src": "./image/mood/summer-2.png",
           "link": "https://youtu.be/BJmvrG95pTs?si=XNCRINI63UcupTr9",
-          "lp-txt": "아무 생각 없이 둥둥 떠다니고 싶은 날",
+          "lp-txt": "아무 생각없이 둥둥 떠다니고 싶은 날",
           "modal-list": [
             "I wrote this instead",
             "That summer",
@@ -669,7 +669,7 @@
           "id": "19",
           "src": "./image/mood/summer-3.png",
           "link": "https://youtu.be/0ESafoYSbh0?si=STZljMRkN9D3bDle",
-          "lp-txt": "이 노래 들으려고 제주도 해안도로 드라이브 중 ⛱",
+          "lp-txt": "제주도 해안도로 드라이브 중⛱",
           "modal-list": [
             "Kind of Love (Feat. Ina Bravo) - SakaZan",
             "How about ♥︎? - 행성 (Hangsung)",
@@ -742,7 +742,7 @@
           "id": "20",
           "src": "./image/mood/summer-4.png",
           "link": "https://youtu.be/KHHLF2PjlEc?si=rjEQI7HEfQz8KMnN",
-          "lp-txt": "여름 플레이리스트🌿 몽글몽글 감성 팝송✨",
+          "lp-txt": "여름🌿 몽글몽글 감성팝송✨",
           "modal-list": [
             "Evergreen - dazeychain",
             "CRUSH - Jimit",
@@ -772,7 +772,7 @@
           "id": "21",
           "src": "./image/mood/hip-1.png",
           "link": "https://youtu.be/jXu1xIY_9dQ?si=wyvQ4QOiq6UTREOC",
-          "lp-txt": "Playlist | 달달하게 듣기 좋은 그루브 팝",
+          "lp-txt": "달달하게 듣기 좋은 그루브 팝",
           "modal-list": [
             "Apple Sauce",
             "Keep Her",
@@ -821,21 +821,21 @@
           "id": "22",
           "src": "./image/mood/hip-2.png",
           "link": "https://youtu.be/jdIDQ1qGutE?si=aykQUwCrjF7ayLyR",
-          "lp-txt": "SYNTHWAVE FOR DRIVING 🌌",
+          "lp-txt": "SYNTHWAVE FOR DRIVING🌌",
           "modal-list": "2 Hours Late Night Mix(Retrowave / Outrun / Chillwave) \n #synthwave #nightdrive #retrowavemix"
         },
         {
           "id": "23",
           "src": "./image/mood/hip-3.png",
           "link": "https://youtu.be/QTxDGbq0_pY?si=VfJmtsS4e39o4Ory",
-          "lp-txt": "Playlist 아침부터 텐션 미쳤다",
+          "lp-txt": "아침부터 텐션 미쳤다",
           "modal-list": "오늘 하루 분위기 책임질 감성 힙합/R&B 플리 🔥♥️ \n #팝송추천 #팝송 #playlist #플레이리스트 #도입부 #pop"
         },        
         {
           "id": "24",
           "src": "./image/mood/hip-4.png",
           "link": "https://youtu.be/Wym_B7-zAJU?si=sRWv-J7pOBH__jEM",
-          "lp-txt": "도입부부터 씹어먹던 그 시절 외힙 00ś ~ 10ś 🔥",
+          "lp-txt": "도입부부터 씹어먹던 외힙 00ś ~ 10ś🔥",
           "modal-list": [
             "Without Me - Eminem",
             "Lean Back - Terror Squad, Fat Joe",
@@ -885,7 +885,7 @@
           "id": "25",
           "src": "./image/mood/hip-5.png",
           "link": "https://youtu.be/67cbLFiE6lo?si=yVUd_RIXGFIlr0RD",
-          "lp-txt": "불금이니까 저만 신나볼게요. EDM 팝송 모음 🔥",
+          "lp-txt": "불금이니까 신나볼게요. EDM 팝송🔥",
           "modal-list": [
             "Play Hard - David Guetta (Feat. Ne-Yo & Akon)",
             "You Make Me Feel (Mighty Real) - Adam Lambert x Sigala",
@@ -970,7 +970,7 @@
           "id": "27",
           "src": "./image/mood/spring-2.png",
           "link": "https://youtu.be/MfQDOh1o2Bo?si=MNbaNX0hXLHIcQ3T",
-          "lp-txt": "몽글몽글 학창 시절 생각나게 하는 봄 플리🌸",
+          "lp-txt": "몽글몽글 학창시절 생각나는 플리🌸",
           "modal-list": [
             "Officially Missing You - 긱스",
             "I Need You - 허각 & 지아",
@@ -998,7 +998,7 @@
           "id": "28",
           "src": "./image/mood/spring-3.png",
           "link": "https://youtu.be/Itg9PBuwae8?si=K7bonz8rsMhG_iaV",
-          "lp-txt": "💙 몽글몽글 설레는 달달한 사랑 노래 모음",
+          "lp-txt": "💙몽글몽글 설레는 달달한 사랑노래",
           "modal-list": [
             "오늘의 고백 - 김민석 (멜로망스)",
             "이렇게 좋아해 본 적이 없어요 - CHEEZE",
@@ -1037,7 +1037,7 @@
           "id": "29",
           "src": "./image/mood/winter-1.png",
           "link": "https://youtu.be/GjjhrDwM95Q?si=6ApGJ9F_5ief9Kh2",
-          "lp-txt": "Playlistㅣ어느덧 겨울이 오고 있는걸",
+          "lp-txt": "어느덧 겨울이 오고 있는걸",
           "modal-list": [
             "Remember - Sam ock",
             "Home - Bruno Major",
@@ -1092,7 +1092,7 @@
           "id": "31",
           "src": "./image/mood/winter-3.png",
           "link": "https://youtu.be/OkkwEgBY1YM?si=lbU0_A1bjq6kMmy8",
-          "lp-txt": "마음이 차분해지는 국내 노래 모음 🌨️🎶",
+          "lp-txt": "마음이 차분해지는 국내노래 모음🌨️🎶",
           "modal-list": [
             "같이 웃자",
             "같이 있으면 시간 빨라",
@@ -1168,7 +1168,7 @@
           "id": "33",
           "src": "./image/mood/winter-5.png",
           "link": "https://youtu.be/0ZhM_KCjVpc?si=WGKkTDZAQZFKdWrT",
-          "lp-txt": "연말 분위기 나는 K캐롤 플리ㅣ국내 캐롤 BEST",
+          "lp-txt": "연말 분위기 나는 K캐롤 플리 BEST",
           "modal-list": [
             "너와의 모든 지금 - 재쓰비",
             "화이트 - 다비치",
@@ -1228,7 +1228,7 @@
           "id": "34",
           "src": "./image/mood/winter-6.png",
           "link": "https://youtu.be/0ZhM_KCjVpc?si=WGKkTDZAQZFKdWrT",
-          "lp-txt": "설레는 겨울 플레이리스트☁️ 분위기 좋은 팝송 모음❄️",
+          "lp-txt": "설레는 겨울☁️ 분위기 좋은 팝송 모음❄️",
           "modal-list": [
             "Footprints That Stay a While",
             "Snow Days Feel Like This",
@@ -1293,7 +1293,7 @@
           "id": "36",
           "src": "./image/mood/winter-8.png",
           "link": "https://youtu.be/lz0DHk4Qel4?si=-YOWzq70pTP_Tno7",
-          "lp-txt": "벌써 첫눈이 왔다고? 그럼 겨울 느낌 좀 내볼까!",
+          "lp-txt": "벌써 첫눈이 왔다고? 겨울느낌 좀 내볼까!",
           "modal-list": [
             "아마두(Feat. 우원재, 김효은, 넉살, 허클베리피) - 다모임",
             "내일이 오면(Feat. 기리보이, BIG Naughty) - 릴보이",
@@ -1369,7 +1369,7 @@
         },
         {
           "id": "38",
-          "src": "./image/mood/winter-2.png",
+          "src": "./image/mood/none-2.png",
           "link": "https://youtu.be/CpTiyCMsg6g?si=vG6pFaTJmEtw76ua",
           "lp-txt": "아재들 마음 속에 헤비메탈",
           "modal-list": [
@@ -1743,5 +1743,5 @@
           "lp-txt": "🎵여기 내가 맡긴 개쩌는 외힙과 R&B",
           "modal-list": "지금 내 맘을 사로잡는 감성 힙합 플레이리스트 \n#알앤비 #rnb #플레이리스트 #playlist #알앤비"
         }
-    ],    
+    ]
 }  

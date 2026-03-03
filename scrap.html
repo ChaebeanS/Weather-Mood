@@ -147,7 +147,11 @@
                 </svg>
                 <span>오늘의 무드</span>
             </p>
+<<<<<<< HEAD
             <p data-url="./scrap.html" class="active">
+=======
+            <p data-url="./scrap.html">
+>>>>>>> bean
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                     <g>
@@ -162,10 +166,31 @@
                 <span>보관함</span>
             </p>
         </div>
+<<<<<<< HEAD
 
         </div>
     </article>
     
     
+=======
+
+        </article>
+    </article>
+    
+    <script>
+        const el_navBarP=document.querySelectorAll('.navBar p')
+
+        el_navBarP.forEach(function(ss,i){
+            ss.addEventListener('click',function(){
+                location.href = this.dataset.url;
+               el_navBarP.forEach(function(aa,i){
+                aa.classList.remove('active')
+               })
+               ss.classList.add('active')
+            })
+            
+        })
+    </script>
+>>>>>>> bean
 </body>
 </html>

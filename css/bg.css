@@ -93,6 +93,8 @@
 @keyframes phone{100%{opacity: 1; transform: translate(-50%,-45%);}}
 
 .app{
+    position:relative;
+    overflow: hidden;
     transform: translateY(15%);
     opacity: 0;
 }

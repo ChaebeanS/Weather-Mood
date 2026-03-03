@@ -1,6 +1,6 @@
 @import url('./common/common.css');
 
-.app{position:relative;overflow: hidden;}
+.app{position:relative; overflow: hidden;}
 .scrap{padding:0 21px;}
 
 /* ============================코디 보관함============================= */
@@ -55,6 +55,13 @@ display: flex;width: 400px;position: relative;
     font-size: 15px;
     font-weight: 500;
      
+}
+.musicScrapSelect h3::after{
+    content:'arrow_forward_ios';
+    font-family: "material symbols outlined";
+    padding-left: 2px;
+    display: inline-block;
+    vertical-align: bottom;  
 }
 .moodScrapSelect h3::after{
     content:'arrow_forward_ios';
