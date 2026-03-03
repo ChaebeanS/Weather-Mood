@@ -5,12 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/scrap.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 </head>
-<body>
-    <article class="app">
-        <div class="scrap">
+<body class="ani">
+    <article class="bg">
+        <div class="phone">
+            <div class="top">
+                <div></div>
+                <span class="ic"> signal_cellular_alt </span>
+                LTE
+                <span class="ic"> battery_android_frame_full </span>
+                
+            </div>    
+        </div>
+        <div class="bg-con">
+            <h1>WEATHER MOOD</h1>
+            <div class="object">
+                <div class="tool">
+                    <h2>Tool</h2>
+                    <ul>
+                        <li>
+                            <img src="./image/bg/figma.png" alt="figma">
+                            <p>Figma</p>
+                        </li>
+                        <li>
+                            <img src="./image/bg/VS.png" alt="vs">
+                            <p>VScode</p>
+                        </li>
+                    </ul>
+                    <div>                        
+                        <span>Ps</span>
+                        <span>Ai</span>
+                        <span>{JSON}</span>
+                        <span>🍌</span>                        
+                    </div>
+                </div>
+                <p>
+                    <img src="./image/bg/BG-wendy.png" alt="wendy">
+                    <img src="./image/bg/BG-Nardy.png" alt="nardy">
+                </p>
+                <div class="talk">
+                    <p>오늘 <span>뭐 입지?</span></p>
+                    <p>밖에서 <span>운동해도</span> 될까?</p>
+                    <p>오늘 날씨에 <span>어울리는 노래</span>는 뭘까?</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <article class="app">
+            <div class="scrap">
             <div class="txt">
                 <span class="material-symbols-outlined">
                     arrow_back
@@ -37,7 +81,7 @@
                     <p></p>
                     <p></p>
                     <p></p>
-                    <span>아직 저장한 코디가 없어요 <br>원하는 스타일의 옷을 스크랩해보세요!</span>
+                    <span>아직 저장한 코디가 없어요 <br>원하는 스타일의 코디를 스크랩해보세요!</span>
                     <a>코디 둘러보기</a>
                 </div>
             </div>
@@ -47,7 +91,7 @@
                     <p></p>
                     <p></p>
                     <p></p>
-                    <span>아직 저장한 코디가 없어요 <br>원하는 스타일의 옷을 스크랩해보세요!</span>
+                    <span>아직 저장한 음악이 없어요 <br>마음에 드는 음악을 스크랩해보세요!</span>
                     <a>음악 둘러보기</a>
                 </div>
             </div>
@@ -55,7 +99,7 @@
         </div>
         
         <div class="navBar">
-            <p>
+            <p data-url="./weather.html">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                     
@@ -81,7 +125,7 @@
                 </svg>
                 <span>날씨</span>
             </p>
-            <p>
+            <p data-url="./codi.html">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                     <path class="st0" d="M29.7,21.9L19,16.2V15c2-0.6,3.4-2.4,3.4-4.4c0-2.5-2.2-4.6-4.8-4.6s-4.8,2.1-4.8,4.6c0,0.8,0.6,1.4,1.4,1.4
@@ -93,7 +137,7 @@
                 </svg>
                 <span>코디</span>
             </p>
-            <p>
+            <p data-url="./mood.html">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                     <g>
@@ -107,7 +151,7 @@
                 </svg>
                 <span>오늘의 무드</span>
             </p>
-            <p>
+            <p data-url="./scrap.html">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
                     <g>
@@ -122,13 +166,16 @@
                 <span>보관함</span>
             </p>
         </div>
-        
+
+        </article>
     </article>
+    
     <script>
         const el_navBarP=document.querySelectorAll('.navBar p')
 
         el_navBarP.forEach(function(ss,i){
             ss.addEventListener('click',function(){
+                location.href = this.dataset.url;
                el_navBarP.forEach(function(aa,i){
                 aa.classList.remove('active')
                })

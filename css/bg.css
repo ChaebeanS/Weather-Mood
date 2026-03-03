@@ -1,7 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* animate */
+.ani .bg{animation: mask 1.5s ease-out forwards;}
+.ani .phone{ animation: phone 0.5s 0.5s forwards;}
+.ani .app{ animation: app 0.5s 0.5s forwards;transform: translateY(15%);
+    opacity: 0;}
+.ani .object > p > img:nth-of-type(1){animation: wendy 0.5s 1.7s forwards;}
+.ani .object > p > img:nth-of-type(2){animation: nardy 0.5s 1.5s forwards;
+}
+.ani .tool{animation: tool 0.5s 1s forwards;
+}
+.ani .talk p:nth-of-type(1){animation: talk01 5s 2.5s forwards; opacity: 0;}
+.ani .talk p:nth-of-type(2){animation: talk02 5s 3.5s forwards; opacity: 0;}
+.ani .talk p:nth-of-type(3){animation: talk03 5s 4.5s forwards; opacity: 0;}
 
-body{margin: 0; padding: 0; background-color: #00ce93;}
-ul,li,p{margin: 0; padding: 0; list-style-type: none;}
+
+.complete .bg{-webkit-mask-position: 0% 0; mask-position: 0% 0;}
+.complete .phone{ opacity: 1; transform: translate(-50%,-45%);}
+.complete .app{ transform: translateY(5%); opacity: 1;}
+.complete .object > p > img:nth-of-type(1){transform: translateX(-130%); opacity: 1;}
+.complete .object > p > img:nth-of-type(2){transform: translateX(20%); opacity: 1;}
+.complete .tool{opacity: 1;}
+.complete .talk p:nth-of-type(1){opacity: 0;}
+.complete .talk p:nth-of-type(2){opacity: 0;}
+.complete .talk p:nth-of-type(3){opacity: 0;}
+
 
 .bg{margin: 0; padding: 0; width: 100%; height: 100vh;
     background: url(../image/bg/BG-b.png) 0 0 / cover no-repeat fixed; 
@@ -14,10 +35,8 @@ ul,li,p{margin: 0; padding: 0; list-style-type: none;}
     -webkit-mask-image: linear-gradient(to right, black 50%, transparent 50%);
     mask-image: linear-gradient(to right, black 50%, transparent 50%);
     -webkit-mask-size: 200% 100%;
-    
-    /* ease-out: 부드럽게 */
-    animation: mask 1.5s ease-out forwards;
 }
+    /* ease-out: 부드럽게 */
 
 /* 왼쪽에서 오른쪽으로 */
 @keyframes mask{
@@ -49,32 +68,33 @@ ul,li,p{margin: 0; padding: 0; list-style-type: none;}
     display: flex; gap: 3px; 
     align-items: center;
     justify-content: right;
-    padding: 7px 20px;
+    padding: 13px 20px;
 }
 .top div{
     background-color: black;
-    width: 200px; height: 25px;
+    width: 180px; height: 25px;
     border-radius: 30px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .phone{
     width: 402px; height: 774px; 
     border: 7px solid rgb(0, 0, 0);
-    border-radius: 30px;
+    border-radius: 40px;
     position: absolute;
     left:50%; top:50%;
     margin-top: 0%;
     pointer-events: none;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
-    animation: phone 0.5s 0.5s forwards;
+    
     opacity: 0;
     transform: translate(-50%,-35%);
 }
 @keyframes phone{100%{opacity: 1; transform: translate(-50%,-45%);}}
 
 .app{
-    animation: app 0.5s 0.5s forwards;
+    position:relative;
+    overflow: hidden;
     transform: translateY(15%);
     opacity: 0;
 }
@@ -95,14 +115,13 @@ ul,li,p{margin: 0; padding: 0; list-style-type: none;}
     position: absolute;
     height: 60vh; margin-top: 2vh;
     transform: translateX(-50%);
-    animation: wendy 0.5s 1.7s forwards;
+    
     opacity: 0;
 }
 .object > p > img:nth-of-type(2){
     position: absolute;
     height: 50vh; margin-top: 15vh;
     transform: translateX(-50%);
-    animation: nardy 0.5s 1.5s forwards;
     opacity: 0;
 }
 
@@ -115,7 +134,6 @@ ul,li,p{margin: 0; padding: 0; list-style-type: none;}
     position: absolute;
     transform: translate(-270%, 200%);
     text-align: left;
-    animation: tool 0.5s 1s forwards;
     opacity: 0;
 }
 @keyframes tool {100%{opacity: 1;}}
@@ -152,9 +170,9 @@ ul,li,p{margin: 0; padding: 0; list-style-type: none;}
     border-radius: 16px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
 }
 
-.talk p:nth-of-type(1){animation: talk01 5s 2.5s forwards; opacity: 0;}
+/* .talk p:nth-of-type(1){}
 .talk p:nth-of-type(2){animation: talk02 5s 3.5s forwards; opacity: 0;}
-.talk p:nth-of-type(3){animation: talk03 5s 4.5s forwards; opacity: 0;}
+.talk p:nth-of-type(3){animation: talk03 5s 4.5s forwards; opacity: 0;} */
 
 
 @keyframes talk01{
