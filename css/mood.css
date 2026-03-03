@@ -27,16 +27,7 @@
     object-fit: cover;
 }
 
-/* ---- article 클래스 "app" ------*/
-.app {
-    width: 402px;
-    height: 774px;
-    margin: 0 auto;
-    background: white;
-    overflow-y: auto;
-    overflow-x: hidden;
-    position: relative;
-}
+
 
 .txt h2 {
     font-weight: bold;

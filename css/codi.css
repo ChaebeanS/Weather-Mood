@@ -1,18 +1,16 @@
 @import url('./common/common.css');
-@import url('./common/reset.css');
 
-.txt h2{
-    font-weight: bold;
-    font-size: 20px;
+.app2{
+    padding: 0 21px;
 }
 
 
-/* ------------- 코디 스타일 5가지 --------------- */
+/* ------------- 코디 스타일 버튼 5가지 --------------- */
 .btn {
     display: flex;
-    margin-top: 21px;
-    margin-bottom: 5px;
-    margin-left: 13px;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    gap:10px;
 
 }
 
@@ -26,26 +24,18 @@
     text-align: center;
     justify-content: center;
     padding: 5px;
-    margin: 5px;
+    
     cursor: pointer;
     transition: 0.3s;
 }
 
 .btn p.active {
     background-color: rgb(143, 235, 208);
+    border: 1px solid #00CE93;;
 }
 
 
-/* article 클래스 "app" */
-.app {
-    max-width: 402px;
-    height: 774px;
-    margin: 0 auto;
-    background: white;
-    overflow-y: auto;
-    overflow: hidden;   
-    position: relative;
-}
+
 
 
 /* -------------- 코디 사진 -----------------  */
@@ -54,14 +44,13 @@
     flex-wrap: wrap;
     gap: 10px;
     overflow-y: auto;
-    padding-left: 21px;
-    height: 550px;
-    
+    height: 510px;
+    scrollbar-width: none;
+    padding: 0 1px;  
 }
 
-.codi img {
-    
-    width: 174.51px;
+.codi img { 
+    width: 174px;
     height: 228px;
     object-fit: cover;
 
@@ -83,14 +72,14 @@ aside {
     border: 0.5px solid black;
     
     /* display: none;   */
-    position: fixed;              
+    position: absolute;              
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-     z-index: 20;
+     z-index: 20000;
     
 }
 aside > img{
@@ -158,15 +147,18 @@ aside.active{
     font-size: 12px;
 }
 
+/* 오버레이 */
 .overlay{
-    width: 402px;
-    height: 774px; 
+    width: 100%;
+    height: 100%; 
+    left: 0; top: 0;
     position: absolute;  
     background: rgba(0,0,0,0.6);
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
     margin: 0;   
+    z-index: 110;
     
 }
 
@@ -183,6 +175,7 @@ aside.active{
     margin-left: 21px;
   
 }
+
 
 /* 별 */
 .modal .star-btn{
@@ -205,3 +198,6 @@ aside.active{
   padding: 0; margin: 0;
  
 }
+
+
+
