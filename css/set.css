@@ -100,7 +100,22 @@
 }
 .bgcOption {}
 
-button {
+.setBtn button {
+    position:absolute;
+    background-color: #EEEEEE;
+    padding: 15px 0;
+    width: 359px;
+    border-radius: 40px;
+    color:#BDBDBD;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Pretendard', sans-serif;  
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);    
+}
+.setBtn button.active{
     position:absolute;
     background-color: #00CE93;
     padding: 15px 0;
