@@ -128,7 +128,7 @@ let weatherBarFun=function(){
         dataJson();
 
       } catch (err) {
-        console.error("날씨 불러오기 실패:", err);
+        //console.error("날씨 불러오기 실패:", err);
       }
     
       isLoading = false;
@@ -155,16 +155,7 @@ let weatherBarFun=function(){
     });
     
     
-    let currentTempGlobal = '9'; // 기본값
     
-    function getSeasonByTemp(temp) {
-      temp = Number(temp);
-    
-      if (temp <= 5) return "겨울";
-      if (temp <= 15) return "가을";
-      if (temp <= 23) return "봄";
-      return "여름";
-    }
     
     
     startWeatherAutoUpdate();

@@ -9,6 +9,17 @@
 
     let imgData = null;
 
+    let currentTempGlobal = '9'; // 기본값
+    
+    window.getSeasonByTemp = function (temp) {
+      temp = Number(temp);
+    
+      if (temp <= 5) return "겨울";
+      if (temp <= 15) return "가을";
+      if (temp <= 23) return "봄";
+      return "여름";
+    }
+
     // JSON 불러오기
     let codiImg = async function () {
       let res = await fetch('./js/codi.json');
