@@ -1,5 +1,4 @@
 @import url('./common/common.css');
-@import url('./common/reset.css');
 
 .app {
     position: relative;
@@ -111,8 +110,8 @@ z-index:2;
     color: rgb(0, 0, 0);
     justify-content: center;
     position: absolute;
-    bottom: 17%;
-    right: 5%;
+    bottom: 15%;
+    right: 7%;
 }
 
 .contents p:nth-child(3) img {}

@@ -109,7 +109,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 30px 30px 10px;
+=======
+    padding: 25px 30px 10px;
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
 }
 
 .weather-title2>p {
@@ -130,7 +134,11 @@
 /* ======================= 주간 날씨 ======================= */
 .weather-week {
     margin: 0 auto;
+<<<<<<< HEAD
     padding: 7px 30px;
+=======
+    padding: 5px 30px;
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
     width: 90%;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -143,11 +151,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     padding: 9px 0;
 }
 
 .week-info{
     width: 30%;
+=======
+    padding: 5px 0;
+}
+
+.week-info{
+    width: 10%;
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
     flex-shrink: 0;
 }
 
@@ -156,7 +172,11 @@
 }
 
 .UPDOWN{
+<<<<<<< HEAD
     width: 30%;
+=======
+    width: 10%;
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
 }
 
 .weather-week>ul>li>b {
@@ -184,9 +204,13 @@
 
 .weather-week .week>li>small {
     font-size: 10px;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
 
+}
 
 .weather-week .UPDOWN {
     display: flex;
@@ -195,7 +219,11 @@
 }
 
 .week-icon .material-symbols-outlined{
+<<<<<<< HEAD
     padding: 0 13px;
+=======
+    padding: 0 10px;
+>>>>>>> cd3c18e454284d0910fb96c01415ff1d9432641d
 }
 
 .weather-week .UPDOWN>p:nth-of-type(1) {

@@ -47,7 +47,6 @@ function getMidTmFc() {
     const now = new Date();
     const hour = now.getHours();
     let baseHour;
-
     if (hour < 6) {
         now.setDate(now.getDate() - 1);
         baseHour = "1800";
@@ -74,13 +73,11 @@ function getWeatherIcon({ sky, pty, text }) {
         if (pty === "3") return "mode_cool";
         if (pty === "4") return "thunderstorm";
     }
-
     if (sky) {
         if (sky === "1") return "clear_day";
         if (sky === "3") return "partly_cloudy_day";
         if (sky === "4") return "cloud";
     }
-
     if (text) {
         if (text.includes("비/눈")) return "weather_mix";
         if (text.includes("눈")) return "mode_cool";
@@ -89,7 +86,6 @@ function getWeatherIcon({ sky, pty, text }) {
         if (text.includes("구름많음")) return "partly_cloudy_day";
         if (text.includes("흐림")) return "cloud";
     }
-
     return "help";
 }
 

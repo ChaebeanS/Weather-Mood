@@ -1,0 +1,20 @@
+@import url('./common/common.css');
+
+.app{position:relative;overflow: hidden;}
+.scrap{padding:0 21px;}
+.moodScrap h3 {
+    font-size: 15px;
+    font-weight: 500;
+    padding-top:1px;
+    
+}
+
+.moodScrapContainer2 {display: flex; position: relative;height: 550px;
+}
+
+.moodScrapContainer2 span{font-size:14px;color:#888888;
+    position:absolute;text-align: center;
+    line-height: 1.4;
+    top:40%;left:50%;transform: translate(-50%,-50%);
+    white-space: nowrap;
+}
