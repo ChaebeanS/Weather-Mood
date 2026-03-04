@@ -23,7 +23,9 @@
            history.back();
         });
     }
-    if(!location.href.includes("index","set")){
+    
+    
+    if(location.pathname != '/'){
         backBtn();
     }
 
@@ -170,8 +172,12 @@ let weatherBarFun=function(){
     startWeatherAutoUpdate();
 
 }
-if(!location.href.includes("weather","index","set")){
+
+let pathname = location.pathname;
+
+
+if(!(location.pathname == "/" || location.href.match("weather") || location.href.match("set"))){
     weatherBarFun();
-}
+  }
 
 
