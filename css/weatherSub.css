@@ -5,6 +5,10 @@
     background: linear-gradient(to bottom, #CFFFF1 0%, #00CE93 77%, #12A77C 100%);
 }
 
+.txt > span{
+    padding: 0 21px;
+}
+
 
 
 
@@ -14,7 +18,7 @@
     width: 90%;
     height: 170px;
     background-color: rgba(255, 255, 255, 0.6);
-    margin: 15px auto;
+    margin: 10px auto;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -33,16 +37,17 @@
 }
 
 .rail {
-    stroke: rgba(96, 96, 96, 1);
+    stroke: rgb(255, 255, 255);
     stroke-linecap: round;
-    stroke-dasharray: 50 50;
+    stroke-dasharray: 50 100;
 }
 
 .progress {
     stroke: url(#gradient);
     stroke-linecap: round;
-    stroke-dasharray: 50 50;
-    animation: progressbar 5s linear;
+    stroke-dasharray: 0 100;
+    /* animation: progressbar 5s linear; */
+    
 }
 
 .sun {
@@ -54,9 +59,12 @@
     border-radius: 100%;
     background-color: yellow;
     filter: drop-shadow(0 0 10px yellow);
-    transform: rotate(0deg) translateX(80px);
-    animation: sun 5s linear forwards;
+    transform: rotate(50deg) translateX(80px);
+    
+    
+    /* animation: sun 5s linear forwards; */
 }
+
 
 @keyframes sun {
     from {}
@@ -140,6 +148,14 @@ h2 {
     height: 87px;
 }
 
+.material-symbols-outlined {transition: 0.3s;} /* 0.3초 동안 자연스럽게 변함 */
+
+/* 등급 색상 */ 
+.grade-1 { color:#2196F3; text-shadow:0 0 6px rgba(33,150,243,0.3); }
+.grade-2 { color:#4CAF50; text-shadow:0 0 6px rgba(76,175,80,0.3); }
+.grade-3 { color:#FF9800; text-shadow:0 0 6px rgba(255,152,0,0.3); }
+.grade-4 { color:#F44336; text-shadow:0 0 6px rgba(244,67,54,0.3); }
+
 .box1 {
     padding: 4px 10px;
 }
@@ -169,16 +185,3 @@ h2 {
 
 
 
-
-/* ======================= 메뉴 버튼 ======================= */
-
-.menubtn {
-    margin: 21px auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 50px;
-    width: 90%;
-    height: 63px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

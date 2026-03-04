@@ -1,8 +1,10 @@
+@import url('../bg.css');
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
 body {
-  margin:0;
-  background: #eee;
   font-family: 'Pretendard', sans-serif;
-  
+  padding: 0; background-color: #00ce93;
 }
 
 .app {
@@ -11,7 +13,7 @@ body {
   margin: 0 auto;
   background: white;
   transform: translateY(5%);
-  border-radius: 20px;
+  border-radius: 40px;
   overflow: hidden;
 }
 
@@ -32,7 +34,7 @@ body {
 }
 
 .txt>h2 {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   margin: 0;
 }
@@ -89,7 +91,7 @@ body {
     transform: translateX(-50%);
     position: absolute;
     z-index:100;
-    bottom: 40px;
+    bottom: 25px;
     
 }
 .navBar p {

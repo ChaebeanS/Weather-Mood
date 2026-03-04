@@ -37,15 +37,7 @@
 
 
 /* article 클래스 "app" */
-.app {
-    max-width: 402px;
-    height: 774px;
-    margin: 0 auto;
-    background: white;
-    overflow-y: auto;
-    overflow: hidden;   
-    position: relative;
-}
+
 
 
 /* -------------- 코디 사진 -----------------  */
