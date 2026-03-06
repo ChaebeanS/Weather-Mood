@@ -29,7 +29,7 @@ if(sessionStorage.ani){
 
         el_backBtn.addEventListener('click',function(){
            history.back();
-           //location.replace();
+           location.replace();
         });
     }
     if(!(location.pathname == '/' || location.href.match('index'))){
