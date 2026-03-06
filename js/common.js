@@ -5,6 +5,11 @@ if(sessionStorage.ani){
   sessionStorage.ani=1
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> won
 // ====================하단 네비바 클릭하여 이동==============================
         const el_navBarP=document.querySelectorAll('.navBar p')
         const currentPath=location.pathname;

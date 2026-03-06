@@ -9,10 +9,11 @@ const serviceKey = encodeURIComponent("0123891d17b0e073ff763a40afc5aed555b9b5035
 // ===============================
 function getDateArr() {
     let arr = [];
+    
     for (let i = 0; i < 7; i++) {
         let d = new Date();
         d.setDate(d.getDate() + i);
-
+        
         arr.push({
             txt: d.getFullYear() +
                 String(d.getMonth() + 1).padStart(2, "0") +

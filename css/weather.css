@@ -9,6 +9,9 @@
     padding: 0 21px;
 }
 
+.txt a{
+    padding: 0 21px;
+}
 
 
 
@@ -130,7 +133,7 @@
 /* ======================= 주간 날씨 ======================= */
 .weather-week {
     margin: 0 auto;
-    padding: 7px 30px;
+    padding: 7px 25px;
     width: 90%;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
@@ -188,22 +191,44 @@
 }
 
 
-.weather-week .UPDOWN {
-    display: flex;
-    justify-content: end;
-    align-items: center;
+/* 주간 날씨 온도 영역 */
+.weather-week .UPDOWN{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
 }
 
+/* 아이콘 간격 */
 .week-icon .material-symbols-outlined{
-    padding: 0 13px;
+    padding:0 13px;
 }
 
-.weather-week .UPDOWN>p:nth-of-type(1) {
-    padding-right: 5px;
-    color: rgb(31, 44, 225);
+/* 온도 박스 */
+.UPDOWN div{
+    display:flex;
+    justify-content:center;
+    gap: 2px;
+    width:70%;        /* 온도 영역 고정 */
+    flex-shrink:0;
+    
 }
 
-.weather-week .UPDOWN>p:nth-of-type(2) {
-    color: #f02a2a;
+/* 온도 숫자 */
+.UPDOWN div p{
+    width:32px;        /* 숫자 폭 고정 → 세로 정렬 맞춤 */
+    font-variant-numeric:tabular-nums; /* 숫자 폭 동일 */
+    margin:0;
+}
+
+/* 최저 기온 */
+.min{
+    color:rgb(0, 17, 255);
+    text-align: center;
+}
+
+/* 최고 기온 */
+.max{
+    color:#ff0000;
+    text-align:center;
 }
 
