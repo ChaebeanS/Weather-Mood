@@ -39,8 +39,9 @@
           <div>
             <span>Ps</span>
             <span>Ai</span>
-            <span>{JSON}</span>
             <span>🍌</span>
+            <span>{Json}</span>
+            <span>{API}</span>
           </div>
         </div>
         <p>
@@ -65,6 +66,9 @@
             arrow_back
           </span>
           <h2>스타일별 날씨 코디</h2>
+          <a href="./index.html" class="material-symbols-outlined">
+            home
+          </a>
         </div>
         <!-- 날씨 상단바 -->
         <div class="weatherBar">
@@ -72,12 +76,12 @@
             <span class="material-symbols-outlined" id="weatherIcon">
               clear_day
             </span>
-            <p id="weatherState">맑음</p>
+            <p id="weatherState"></p>
             <div class="divider"></div>
           </div>
-          <p id="currentTemp">현재</p>
+          <p id="currentTemp"></p>
           <div class="divider"></div>
-          <p id="minMaxTemp">최저 / 최고 </p>
+          <p id="minMaxTemp"></p>
         </div>
         <!-- 코디 스타일 5가지 -->
         <div class="btn">
@@ -97,7 +101,7 @@
           <p><img src="./image/codi/남자 캐주얼/가을/img6.png" alt=""></p> -->
         </div>
 
-        
+
 
         <!-- 배경 오버레이 -->
         <div class="overlay"></div>
@@ -205,21 +209,8 @@
   </article>
 
 
-
-  
-
-
-
-  <!-- common.js 불러오기 -->
-  <script defer src="./js/common.js"></script>
-
-  <!-- codi.js 불러오기 -->
-  <script src="./js/codi.js"></script>
-
-
-
-
-
 </body>
+<script defer src="./js/common.js"></script>
+<script defer src="./js/codi.js"></script>
 
 </html>

@@ -73,6 +73,44 @@ z-index:2;
     opacity:0;}
 }
 
+/* sun - 나영 */
+.weatherSun img{
+    width: 180px;
+    position: absolute;
+    margin-left: 160px;
+    animation: sunRotate 10s linear infinite;
+}
+@keyframes sunRotate{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+/* cloudy - 나영 */
+.cloud2 {
+    position:absolute;
+    width: 290px;
+    right:-55px;
+    bottom: -180px;
+    z-index:2;
+    animation: cloud2Rotate 5s ease-in-out infinite;
+}
+@keyframes cloud2Rotate{
+    0%{ transform: translateY(0);}
+    50%{ transform: translateY(-10px);}
+    100%{ transform: translateY(0);}
+} 
+
+.cloudy .cloudSun{
+    width: 110px;
+    margin-left: 230px;
+    position: absolute;
+    animation: cloudSun 13s linear infinite;
+}
+@keyframes cloudSun{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
 
 .charcter img {
     position:relative;

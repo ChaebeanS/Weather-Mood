@@ -9,7 +9,7 @@
 
     let imgData = null;
 
-    let currentTempGlobal = '9'; // 기본값
+    let currentTempGlobal = 9; // 기본값
     
     window.getSeasonByTemp = function (temp) {
       temp = Number(temp);
@@ -19,6 +19,7 @@
       if (temp <= 23) return "봄";
       return "여름";
     }
+    
 
     // JSON 불러오기
     let codiImg = async function () {
@@ -41,7 +42,7 @@
           el_Img.innerHTML = '';
 
           // 성별
-          let gender = localStorage.getItem("gender") || "남성";
+          let gender = localStorage.getItem("gender") || "m";
           
 
           if (
@@ -62,6 +63,7 @@
               </p>
             `;
           });
+          
 
 
         });
@@ -164,6 +166,8 @@
       },100)
     }
 
+
+    
     
 
     codiImg();
