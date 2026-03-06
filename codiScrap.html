@@ -37,8 +37,9 @@
                     <div>                        
                         <span>Ps</span>
                         <span>Ai</span>
-                        <span>{JSON}</span>
                         <span>🍌</span>                        
+                        <span>{Json}</span>
+                        <span>{API}</span>
                     </div>
                 </div>
                 <p>
@@ -60,6 +61,9 @@
                     arrow_back
                 </span>
                 <h2>MY 보관함</h2>
+                <a href="./index.html" class="material-symbols-outlined">
+                    home
+                </a>
             </div>
             
             <div class="weatherBar">
@@ -67,13 +71,13 @@
                     <span class="material-symbols-outlined" id="weatherIcon">
                         clear_day
                     </span>
-                    <p id="weatherState">맑음</p>
+                    <p id="weatherState"></p>
                     <div class="divider"></div>
                 </div>
 
-                <p id="currentTemp">현재 --°</p>
+                <p id="currentTemp"></p>
                 <div class="divider"></div>
-                <p id="minMaxTemp">최저 --° / 최고 --°</p>
+                <p id="minMaxTemp"></p>
             </div>
 
             <div class="codiScrap">
@@ -162,6 +166,38 @@
                 <span>보관함</span>
             </p>
         </div>
+
+        <!-- 배경 오버레이 -->
+        <div class="overlay"></div>
+
+        <!-- 코디 사진 팝업창 -->
+        <aside class="modal">
+          <img src="./image/codi/남자 캐주얼/가을/img2.jpg" alt="">
+          <div class="title">
+            <span>
+              <button class="star-btn"></button>
+            </span>
+            <p>현재 기온과 잘 어울리는 코디</p>
+          </div>
+          <p id="modalTop">상의: 체크셔츠</p>
+          <p id="modalBottom">하의: 데님바지</p>
+          <!-- 링크 버튼+닫기 -->
+          <div class="btn-area">
+            <a href="https://kr.pinterest.com/">
+              <img src="./image/codi/pin_1 1.svg" alt="">
+              코디 더보기
+            </a>
+            <button class="close">닫기</button>
+          </div>
+        </aside>
+
+        <!-- <div class="scrapDelete">
+            <p>삭제하시겠습니까?</p>
+            <div class="btn-area">
+            <button class="yes">예</button>
+            <button class="no">아니오</button>
+          </div>
+        </div> -->
 
         </div>
 

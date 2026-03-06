@@ -37,8 +37,9 @@
                     <div>                        
                         <span>Ps</span>
                         <span>Ai</span>
-                        <span>{JSON}</span>
                         <span>🍌</span>                        
+                        <span>{Json}</span>
+                        <span>{API}</span>                     
                     </div>
                 </div>
                 <p>
@@ -60,6 +61,9 @@
                     arrow_back
                 </span>
                 <h2>MY 보관함</h2>
+                <a href="./index.html" class="material-symbols-outlined">
+                    home
+                </a>
             </div>
             
             <div class="weatherBar">
@@ -67,22 +71,19 @@
                     <span class="material-symbols-outlined" id="weatherIcon">
                         clear_day
                     </span>
-                    <p id="weatherState">맑음</p>
+                    <p id="weatherState"></p>
                     <div class="divider"></div>
                 </div>
 
-                <p id="currentTemp">현재 --°</p>
+                <p id="currentTemp"></p>
                 <div class="divider"></div>
-                <p id="minMaxTemp">최저 --° / 최고 --°</p>
+                <p id="minMaxTemp"></p>
             </div>
 
             <div class="moodScrap">
                 <h3>음악 보관함</h3>
                 
                 <div class="moodScrapContainer2">
-                    <p>
-                        <span>아직 저장한 음악이 없어요!</span>
-                    </p>
                 </div>
             </div>
         
@@ -157,6 +158,38 @@
                 <span>보관함</span>
             </p>
         </div>
+
+                    <!-- 배경 오버레이 -->
+        <div class="overlay"></div>
+
+            <!-- ==========  플레이리스트 팝업창 ============ -->
+        <aside class="modal">
+                <video class="modal-video" autoplay muted loop playsinline>
+                <source src="./image/mood/Record-1.mp4" type="video/mp4">
+                </video>
+                <div class="title">
+                    <span><button class="star-btn"></button></span>
+                    <p>
+                        <!-- 비 오는 날 듣기좋은 플리 -->
+                    </p>
+                </div>
+
+                <div class="modal-list">
+                    <p>
+
+                    </p>
+                    <!-- <p>소나기 - 이클립스 (ECLIPSE)</p> -->
+                </div>
+
+                <!-- 링크 버튼+닫기 -->
+                <div class="btn-area">
+                    <a href="https://youtube.com/" target="_blank">
+                        <img src="./image/mood/Union.svg" alt="">
+                        음악 듣기
+                    </a>
+                    <button class="close">닫기</button>
+                </div>
+        </aside>
 
         </div>
 

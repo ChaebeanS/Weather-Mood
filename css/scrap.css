@@ -42,12 +42,20 @@ border:2px dashed #f0f0f0;margin-right:10px;}
 
 /* ------------------ 코디 보관함 스크랩되있을때---------------------- */
 .codiScrapContainer{height: 180px; 
-display: flex;width: 400px;position: relative;
+ width: 100%; position: relative;
  overflow-x: auto; gap:10px;
 }
 .codiScrapContainer img{height: 100%; width: 138px; object-fit: cover;}
 
-
+.codiScrapContainer .list{
+    position: relative;
+    /* width: 400px; */
+}
+.codiScrapContainer .list img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 /* ============================음악 보관함============================= */
 .moodScrapSelect{margin-top:30px;}
 .moodScrapSelect h3 {
@@ -70,18 +78,21 @@ display: flex;width: 400px;position: relative;
     display: inline-block;
     vertical-align: bottom;  
 }
-.moodScrapContainer{height: 180px; 
-display: flex;width: 1000px;position: relative;}
-.moodScrapContainer p{height: 100%; width: 138px;
+/* ------------------ 음악 보관함 빈공간일때---------------------- */
+.moodScrapContainerEmpty{height: 180px; 
+display: flex;width: 1000px;position: relative;
+ overflow-x: auto; gap:10px;}
+
+.moodScrapContainerEmpty p{height: 100%; width: 138px;
 background-color: #ffffff;
-border:2px dashed #f0f0f0;margin-right:10px;}
-.moodScrapContainer span{
+border:2px dashed #f0f0f0;}
+.moodScrapContainerEmpty span{
     font-size:14px;color:#888888;
     position:absolute;text-align: center;
     line-height: 1.4;
     top:40%;left:18%;transform: translate(-50%,-50%);
 }
-.moodScrapContainer a{position:absolute;
+.moodScrapContainerEmpty a{position:absolute;
     font-size:14px;color:#2b2b2b;padding:7px 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
@@ -90,3 +101,35 @@ border:2px dashed #f0f0f0;margin-right:10px;}
     border:1px solid #CFCFCF;
 }
 
+/* ------------------ 음악 보관함 스크랩되있을때---------------------- */
+.moodScrapContainer {height: 180px; 
+width: 100%;position: relative;
+ overflow-x: auto; gap:10px;}
+
+.moodScrapContainer img{height: 100%; width: 138px; object-fit: cover;}
+.moodScrapContainer .list{
+    position: relative;
+    /* width: 400px; */
+}
+.moodScrapContainer .list img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.moodScrapContainer .list p{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0%;
+    /* padding-top:10px;
+    padding-left:10px;
+    padding-right:10px; */
+    display: flex;
+    font-size: 13px;
+    text-align: left;
+    align-items: center;
+    padding: 0 10px;
+    color: #00ce93;
+}

@@ -214,7 +214,6 @@ async function getAirQualitySafe() {
 
         if (!res.ok) throw new Error(res.status);
 
-
         const data = await res.json();
         const item = data.response?.body?.items?.[0];
         if (!item) return;
@@ -225,7 +224,7 @@ async function getAirQualitySafe() {
         applyDust(".pm10", item.pm10Grade1h);
         applyDust(".pm25", item.pm25Grade1h);
 
-
+        
 
         // ✅ 업데이트 시간 표시
         const timeEl = document.querySelector(".dust-time");
@@ -265,6 +264,7 @@ function applyDust(selector, gradeValue) {
     textEl.classList.remove("grade-1", "grade-2", "grade-3", "grade-4");
     iconEl.classList.remove("grade-1", "grade-2", "grade-3", "grade-4");
 
+    
 
     if (gradeMap[grade]) {
         const current = gradeMap[grade];
@@ -278,6 +278,7 @@ function applyDust(selector, gradeValue) {
         textEl.textContent = "--";
         iconEl.textContent = "help";
     }
+    localStorage.setItem('dust',textEl.textContent)
 }
 
 
@@ -337,8 +338,6 @@ async function getWeatherData() {
         `&base_date=${ncstInfo.date}` +
         `&base_time=${ncstInfo.time}` +
         `&nx=61&ny=131`;
-
-
 
     try {
 
@@ -607,7 +606,6 @@ function applyMoonData(item) {
 
     const lunAge = Number(item.lunAge);
 
-
     const phaseName = getPhaseByAge(lunAge);
     const illumination = getIllumination(lunAge);
 
@@ -625,7 +623,8 @@ function applyMoonData(item) {
 
     moonName.innerHTML = `
     <span class="phase-text">${phaseName.kor}</span>
-    `;
+    <span class="illum-text">밝기:${illumination}%</span>
+`;
 }
 
 
@@ -659,3 +658,17 @@ document.addEventListener("DOMContentLoaded", () => {
     scheduleMoonUpdate(); // 자정 자동 갱신
 
 });
+
+// ============================배경색 설정시 메인배경색 바뀌게===============================
+    const el_appBgc=document.querySelector('.app')
+    let selectedBgc=localStorage.getItem('bgc')/* set.js에서 배경색 설정 후 저장된 색이름 */
+
+    const gradientBgc={
+        gray: 'linear-gradient(to bottom, #EBEBEB 0%, #999999 100%)',
+        green: 'linear-gradient(to bottom, #CFFFF1 0%, #00CE93 77%, #12A77C 100%)',
+        blue: 'linear-gradient(to bottom, #cbe0ff 0%, #6ea3f3 77%, #458bf5 100%)',
+        purple: 'linear-gradient(to bottom, #dbd3ff 0%, #a08bff 77%, #8164ff 100%)',
+        yellow: 'linear-gradient(to bottom, #ffeab1 0%, #e4c267 77%, #dbad2c 100%)'
+    }
+
+    el_appBgc.style.background=gradientBgc[selectedBgc]

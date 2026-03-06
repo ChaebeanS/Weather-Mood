@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/scrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script defer src="./js/scrap.js"></script>
     <script defer src="./js/common.js"></script>
 </head>
@@ -37,8 +39,9 @@
                     <div>                        
                         <span>Ps</span>
                         <span>Ai</span>
-                        <span>{JSON}</span>
                         <span>🍌</span>                        
+                        <span>{Json}</span>
+                        <span>{API}</span>                      
                     </div>
                 </div>
                 <p>
@@ -61,20 +64,22 @@
                     arrow_back
                 </span>
                 <h2>MY 보관함</h2>
+                <a href="./index.html" class="material-symbols-outlined">
+                    home
+                </a>
             </div>
             
             <div class="weatherBar">
                 <div class="weatherBarIcon">
                     <span class="material-symbols-outlined" id="weatherIcon">
-                        clear_day
                     </span>
-                    <p id="weatherState">맑음</p>
+                    <p id="weatherState"></p>
                     <div class="divider"></div>
                 </div>
 
-                <p id="currentTemp">현재 --°</p>
+                <p id="currentTemp"></p>
                 <div class="divider"></div>
-                <p id="minMaxTemp">최저 --° / 최고 --°</p>
+                <p id="minMaxTemp"></p>
             </div>
 
             <div class="codiScrapSelect">
@@ -84,13 +89,8 @@
             </div>
             <div class="moodScrapSelect">
                 <h3>음악 보관함</h3>
-                <div class="moodScrapContainer">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <span>아직 저장한 음악이 없어요 <br>마음에 드는 음악을 스크랩해보세요!</span>
-                    <a href="./mood.html">음악 둘러보기</a>
-                </div>
+                <div class="moodScrapContainer"></div>
+                <div class="moodScrapContainerEmpty"></div>
             </div>
         </div>
         

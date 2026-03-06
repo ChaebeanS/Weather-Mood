@@ -132,7 +132,7 @@
 /* 툴 */
 .tool{
     position: absolute;
-    transform: translate(-270%, 200%);
+    transform: translate(-210%, 200%);
     text-align: left;
     opacity: 0;
 }
