@@ -262,3 +262,17 @@ async function dataFun() {
 // 실행 + 10분 갱신
 dataFun();
 setInterval(dataFun, 10 * 60 * 1000);
+
+// ============================배경색 설정시 메인배경색 바뀌게===============================
+    const el_appBgc=document.querySelector('.app')
+    let selectedBgc=localStorage.getItem('bgc')/* set.js에서 배경색 설정 후 저장된 색이름 */
+
+    const gradientBgc={
+        gray: 'linear-gradient(to bottom, #EBEBEB 0%, #999999 100%)',
+        green: 'linear-gradient(to bottom, #CFFFF1 0%, #00CE93 77%, #12A77C 100%)',
+        blue: 'linear-gradient(to bottom, #cbe0ff 0%, #6ea3f3 77%, #458bf5 100%)',
+        purple: 'linear-gradient(to bottom, #dbd3ff 0%, #a08bff 77%, #8164ff 100%)',
+        yellow: 'linear-gradient(to bottom, #ffeab1 0%, #e4c267 77%, #dbad2c 100%)'
+    }
+
+    el_appBgc.style.background=gradientBgc[selectedBgc]

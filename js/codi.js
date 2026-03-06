@@ -41,7 +41,7 @@
           el_Img.innerHTML = '';
 
           // 성별
-          let gender = localStorage.getItem("gender") || "남성";
+          let gender = localStorage.getItem("gender") || "m";
           
 
           if (

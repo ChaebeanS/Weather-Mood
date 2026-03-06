@@ -1,3 +1,11 @@
+if(sessionStorage.ani){
+  document.body.className='complete';
+}else{
+  document.body.className='ani';
+  sessionStorage.ani=1
+}
+
+
 // ====================하단 네비바 클릭하여 이동==============================
         const el_navBarP=document.querySelectorAll('.navBar p')
         const currentPath=location.pathname;
@@ -23,9 +31,7 @@
            history.back();
         });
     }
-    
-    
-    if(location.pathname != '/'){
+    if(!(location.pathname == '/' || location.href.match('index'))){
         backBtn();
     }
 
@@ -78,7 +84,7 @@ let weatherBarFun=function(){
           Number(ncstItems.find(i => i.category === "T1H")?.obsrValue)
         );
         currentTempGlobal = parseInt(temp);
-    
+
         const pty = ncstItems.find(i => i.category === "PTY")?.obsrValue;
     
         // 현재 시간 구하기 (예: 1400 형태)
@@ -110,13 +116,22 @@ let weatherBarFun=function(){
           else if (sky == 3) { skyText = "흐림"; iconText = "cloudy"; }
           else if (sky == 4) { skyText = "구름(살짝흐림)"; iconText = "partly_cloudy_day"; }
         }
+
+        // localstorage에 현재기온,하늘상태 찍어주기
+        localStorage.setItem('tempSky',JSON.stringify({temp,skyText}))
     
         // 요소가 존재하면 업데이트
         const currentTempEl = document.getElementById("currentTemp");
         if (currentTempEl) currentTempEl.innerText = `현재 ${temp}°`;
+
+        const currentTempIndexEl = document.getElementById("currentTempIndex");
+        if (currentTempIndexEl) currentTempIndexEl.innerText = `${temp}°`;
     
         const minMaxTempEl = document.getElementById("minMaxTemp");
         if (minMaxTempEl) minMaxTempEl.innerText = `최저 ${minTemp}° / 최고 ${maxTemp}°`;
+
+        const minMaxTempIndexEl = document.getElementById("minMaxTempIndex");
+        if (minMaxTempIndexEl) minMaxTempIndexEl.innerText = `${minTemp}° / ${maxTemp}°`;
     
         const weatherStateEl = document.getElementById("weatherState");
         if (weatherStateEl) weatherStateEl.innerText = skyText;
@@ -130,7 +145,7 @@ let weatherBarFun=function(){
         dataJson();
 
       } catch (err) {
-        //console.error("날씨 불러오기 실패:", err);
+        // console.error("날씨 불러오기 실패:", err);
       }
     
       isLoading = false;
@@ -169,6 +184,4 @@ let pathname = location.pathname;
 
 if(!(location.pathname == "/" || location.href.match("weather") || location.href.match("set"))){
     weatherBarFun();
-  }
-
-
+  }; 

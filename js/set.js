@@ -72,11 +72,15 @@ el_bgcInput.forEach(function(ss,i){
 // 저장버튼 클릭
 el_setBtn.addEventListener('click',function(){
     if(!el_setBtn.classList.contains('active')) return;/* 저장버튼에 active가 없으면 실행X */
+    const prevGender=localStorage.getItem('gender')/* 이전 gender값 가져옴 */
     localStorage.setItem('gender',selectedGender)
     localStorage.setItem('temp',selectedTemp)
     localStorage.setItem('lang',selectedLang)
     localStorage.setItem('bgc',selectedBgc)
     location.href="./index.html"
+    if(prevGender!==selectedGender){/* 이전값과 비교했을때 달라졌을때만 */
+        localStorage.removeItem('scrapList')/* scrapList 아예 제거 */
+    }
 });
 
 
