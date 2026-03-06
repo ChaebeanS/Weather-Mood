@@ -40,6 +40,13 @@ body {
   margin: 0;
 }
 
+.txt a {
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
 /* ========================상단 미니 날씨바==================== */
 .weatherBar {
   background-color: rgb(238, 238, 238);
