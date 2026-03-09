@@ -107,7 +107,7 @@
     const el_mainItem=document.querySelector('.item')
 
     let loadCharacter=async function(){
-      console.log(23234)
+      
       const res=await fetch('./js/index.json')
       const data=await res.json();
 
@@ -119,7 +119,7 @@
         return tempSky.temp >= ss.min && tempSky.temp <=ss.max;
       })
 
-
+console.log(23234)
       let imgpng=resultCodi.img[genderCheck]/* 나온 배열의 img[가져온 성별값] -> 해당 옷의 경로값 */
 
       el_mainCharacter.innerHTML=`<img src="${imgpng}" alt="">`/* 해당 옷의 경로값 삽입 */
