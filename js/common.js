@@ -147,8 +147,6 @@ let weatherBarFun=function(){
         const updateEl = document.getElementById("updateTime");
         if (updateEl) updateEl.innerText = `업데이트: ${new Date().toLocaleTimeString()}`;
         
-        
-        loadCharacter();
         dataJson();
 
       } catch (err) {
