@@ -7,7 +7,8 @@
         
         if(savedGender){/* 가져올수있다면->한번 선택한적 있음->바로 메인으로 */
           onboarding.style.display='none'
-          main.style.display='block'
+          main.style.display='block';
+          loadCharacter();
         }else{/* 가져올수없다면->null->처음 방문->온보딩 */
           onboarding.style.display='block'
           main.style.display='none'
@@ -107,7 +108,7 @@
     const el_mainCharacter=document.querySelector('.character')
     const el_mainItem=document.querySelector('.item')
 
-    let loadCharacter=async function(){
+    async function loadCharacter(){
       
       const res=await fetch('./js/index.json')
       const data=await res.json();
