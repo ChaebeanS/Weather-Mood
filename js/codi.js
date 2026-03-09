@@ -122,6 +122,7 @@
     // ======= 코디 스크랩 ==========
       // 별 초기화 함수
     function resetStar() {
+      const starBtn = document.querySelector('.star-btn');
       starBtn.classList.remove('active');
       starBtn.innerHTML = `<img src="./image/codi/Vector2.svg" alt="star empty">`;
     }
@@ -159,7 +160,7 @@
       overlay.classList.remove('active');
       modal.classList.remove('active');
       setTimeout(()=>{
-        starBtn.innerHTML = `<img src="./image/codi/Vector2.svg" alt="star empty">`;
+        resetStar();
       },100)
     }
 

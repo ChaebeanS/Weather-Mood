@@ -28,7 +28,11 @@ if(sessionStorage.ani){
         const el_backBtn=document.querySelector('.txt span')
 
         el_backBtn.addEventListener('click',function(){
-           history.back();
+          if(location.pathname.match('codiScrap') || location.pathname.match('moodScrap')){
+            location.href = './scrap.html';
+          }else{
+            history.back();           
+          }
         });
     }
     if(!(location.pathname == '/' || location.href.match('index'))){
@@ -142,7 +146,7 @@ let weatherBarFun=function(){
     
         const updateEl = document.getElementById("updateTime");
         if (updateEl) updateEl.innerText = `업데이트: ${new Date().toLocaleTimeString()}`;
-
+        
         dataJson();
 
       } catch (err) {
@@ -183,6 +187,7 @@ let weatherBarFun=function(){
 let pathname = location.pathname;
 
 
-if(!(location.pathname == "/" || location.href.match("weather") || location.href.match("set"))){
+if(!( location.href.match("weather") || location.href.match("set"))){
     weatherBarFun();
+          
   }; 
