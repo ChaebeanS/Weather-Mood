@@ -13,14 +13,14 @@ if(sessionStorage.ani){
         el_navBarP.forEach(function(ss,i){
             ss.addEventListener('click',function(){
                 location.href = this.dataset.url;
-               el_navBarP.forEach(function(aa,i){
-                aa.classList.remove('active')
-               })
-               ss.classList.add('active')
+              //  el_navBarP.forEach(function(aa,i){
+              //   aa.classList.remove('active')
+              //  })
+              //  ss.classList.add('active')
             });
-            if(ss.dataset.url == currentPath){
-                ss.classList.add('active')
-            }
+            // if(ss.dataset.url == currentPath){
+            //     ss.classList.add('active')
+            // }
         });
 
 // ===========================뒤로가기 버튼================================
