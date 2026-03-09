@@ -13,6 +13,8 @@
     padding: 0 21px;
 }
 
+.mainHeader {min-height: 180px;}
+
 .mainCurrentWeather {
     text-align: center;
     padding-top: 76px;
