@@ -28,11 +28,7 @@ if(sessionStorage.ani){
         const el_backBtn=document.querySelector('.txt span')
 
         el_backBtn.addEventListener('click',function(){
-          if(location.pathname.match('codiScrap') || location.pathname.match('moodScrap')){
-            location.href = './scrap.html';
-          }else{
-            history.back();           
-          }
+          history.back();           
         });
     }
     if(!(location.pathname == '/' || location.href.match('index'))){
