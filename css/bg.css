@@ -1,3 +1,5 @@
+@media (min-width: 1280px) {
+    
 /* animate */
 .ani .bg{animation: mask 1.5s ease-out forwards;}
 .ani .phone{ animation: phone 0.5s 0.5s forwards;}
@@ -193,4 +195,12 @@
     10%{transform: translate(130%, 200%) scale(0.7); opacity: 1;}
     70%{transform: translate(130%, -20%) scale(1);}
     100%{opacity: 0;}
+}
+
+
+}
+
+
+@media (max-width: 768px) {
+    .phone, .bg-con{display: none;}
 }
