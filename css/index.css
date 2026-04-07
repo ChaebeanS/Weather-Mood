@@ -1115,12 +1115,11 @@ z-index:2;
     display: inline-block;
     border-radius: 40px;
     font-size: 12px;
-    width: 175px;
+    width: 40vw;
 }
 
 .onboarding button {
-    margin-top: auto;
-    bottom: 40px;
+    margin-top: 70px;
     background-color: #EEEEEE;
     padding: 15px 0;
     width: 83vw;
@@ -1133,8 +1132,7 @@ z-index:2;
 }
 
 .onboarding button.active {
-    margin-top: auto;
-    bottom: 40px;
+    margin-top: 70px;
     background-color: #00CE93;
     padding: 15px 0;
     width: 83vw;
