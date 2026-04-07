@@ -120,7 +120,7 @@ let dataJson = async function () {
 
 }
 
-
+dataJson();
 
 
 let modalFun = function(dataFilter){

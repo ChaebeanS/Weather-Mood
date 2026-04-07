@@ -1,6 +1,3 @@
-// ===============음악 스크랩한 id값 가져와서 보관함에 넣기====================
-
-// mood-playlist.json 전체 코디 데이터 불러옴
 let dataFilter = [];
 let loadScrap = async function () {
     const res = await fetch('./js/mood-playlist.json')

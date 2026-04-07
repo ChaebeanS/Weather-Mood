@@ -27,6 +27,7 @@
       imgData = await res.json();
 
 
+
       // 코디 스타일 5가지 클릭이벤트 
       el_Btn.forEach(function (btn) {
 
@@ -70,7 +71,7 @@
         
       });
 
-
+      el_Btn[0].click();
       const aside = document.querySelector('aside');
 
       // 코디 사진 클릭 이벤트 -> 팝업창

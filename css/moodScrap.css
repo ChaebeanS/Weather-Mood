@@ -9,6 +9,30 @@
     
 }
 
+/* ------------- 서브메뉴 --------------- */
+.styleBtn {
+    display: flex;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    gap:10px;
+
+}
+
+.styleBtn a{
+    border-radius: 50px;
+    border: 1px solid rgb(238 238 238);
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 10px;
+    
+    transition: 0.3s;
+}
+
+.styleBtn a.active {
+    background-color: rgb(143, 235, 208);
+    border: 1px solid #00CE93;
+}
 
 /* ------------------ 음악 보관함 스크랩되있을때---------------------- */
 

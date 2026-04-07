@@ -123,31 +123,12 @@ let weatherBarFun=function(){
         }
 
         // localstorage에 현재기온,하늘상태 찍어주기
-        localStorage.setItem('tempSky',JSON.stringify({temp,skyText}))
-    
-        // 요소가 존재하면 업데이트
-        const currentTempEl = document.getElementById("currentTemp");
-        if (currentTempEl) currentTempEl.innerText = `현재 ${temp}°`;
+        localStorage.setItem('tempSky',JSON.stringify({temp,skyText}));
+        localStorage.setItem('getWeatherAll',JSON.stringify({temp,minTemp,maxTemp,skyText,iconText}));
 
-        const currentTempIndexEl = document.getElementById("currentTempIndex");
-        if (currentTempIndexEl) currentTempIndexEl.innerText = `${temp}°`;
     
-        const minMaxTempEl = document.getElementById("minMaxTemp");
-        if (minMaxTempEl) minMaxTempEl.innerText = `최저 ${minTemp}° / 최고 ${maxTemp}°`;
-
-        const minMaxTempIndexEl = document.getElementById("minMaxTempIndex");
-        if (minMaxTempIndexEl) minMaxTempIndexEl.innerText = `${minTemp}° / ${maxTemp}°`;
-    
-        const weatherStateEl = document.getElementById("weatherState");
-        if (weatherStateEl) weatherStateEl.innerText = skyText;
-    
-        const weatherIconEl = document.getElementById("weatherIcon");
-        if (weatherIconEl) weatherIconEl.innerText = iconText;
-    
-        const updateEl = document.getElementById("updateTime");
-        if (updateEl) updateEl.innerText = `업데이트: ${new Date().toLocaleTimeString()}`;
         
-        dataJson();
+        
 
       } catch (err) {
         // console.error("날씨 불러오기 실패:", err);
@@ -160,34 +141,105 @@ let weatherBarFun=function(){
       if (activeTab) activeTab.click();
     }
     
-    // 10분 자동 갱신
-    function startWeatherAutoUpdate() {
-      getWeatherAll(); // 최초 실행
-      weatherInterval = setInterval(() => getWeatherAll(), 600000);
-    }
-    
-    
-    // 탭 비활성 시 정지
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden) {
-        clearInterval(weatherInterval);
-      } else {
-        startWeatherAutoUpdate();
-      }
-    });
-    
-    
-    
-    
-    
-    startWeatherAutoUpdate();
-
+    getWeatherAll();
 }
 
-let pathname = location.pathname;
+async function getAirQualitySafe() {
+
+    const serviceKey = "0123891d17b0e073ff763a40afc5aed555b9b50358d33ebf729a71244c77c4e0";  // 일반키 그대로
+    const stationName = "의정부동";
+
+    let lastFetchTime = 0;
+    let isFetching = false;
+    const MIN_INTERVAL = 10 * 60 * 1000; // 10분
+
+    const now = Date.now();
+    if (now - lastFetchTime < MIN_INTERVAL) return;
+    if (isFetching) return;
+
+    isFetching = true;
+    lastFetchTime = now;
+
+    const url =
+        `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty?` +
+        `serviceKey=${encodeURIComponent(serviceKey)}` +
+        `&returnType=json&numOfRows=1&pageNo=1` +
+        `&stationName=${encodeURIComponent(stationName)}` +
+        `&dataTerm=DAILY&ver=1.3`;
 
 
-if(!( location.href.match("weather") || location.href.match("set"))){
-    weatherBarFun();
+    try {
+        const res = await fetch(url);
+
+        if (res.status === 429) {
+            console.warn("요청 제한 초과 → 15분 후 재시도");
+            setTimeout(() => getAirQualitySafe(), 15 * 60 * 1000);
+            return;
+        }
+
+        if (!res.ok) throw new Error(res.status);
+
+        const data = await res.json();
+        const item = data.response?.body?.items?.[0];
+        if (!item) return;
+
+        function applyDust(value){
+          const gradeMap = {
+              1: { text: "좋음"},
+              2: { text: "보통"},
+              3: { text: "나쁨"},
+              4: { text: "매우나쁨"}
+          };
+  
+          localStorage.setItem('dust', JSON.stringify(gradeMap[value].text));
+        }
+
+        applyDust(item.pm10Grade1h);
+        applyDust(item.pm25Grade1h);
+        
+
+    } catch (err) {
+        console.error("미세먼지 로드 실패:", err);
+    } finally {
+        isFetching = false;
+    }
+}
+
+
+
+async function weather(){
+  if(!localStorage.getWeatherAll){
+    await weatherBarFun();  
+    await getAirQualitySafe();
+    console.log('날씨호출')
+  }
+  else{
           
-  }; 
+          let w = JSON.parse(localStorage.getWeatherAll || {});
+      
+          // 요소가 존재하면 업데이트
+          const currentTempEl = document.getElementById("currentTemp");
+          if (currentTempEl) currentTempEl.innerText = `현재 ${w.temp}°`;
+
+          const currentTempIndexEl = document.getElementById("currentTempIndex");
+          if (currentTempIndexEl) currentTempIndexEl.innerText = `${w.temp}°`;
+      
+          const minMaxTempEl = document.getElementById("minMaxTemp");
+          if (minMaxTempEl) minMaxTempEl.innerText = `최저 ${w.minTemp}° / 최고 ${w.maxTemp}°`;
+
+          const minMaxTempIndexEl = document.getElementById("minMaxTempIndex");
+          if (minMaxTempIndexEl) minMaxTempIndexEl.innerText = `${w.minTemp}° / ${w.maxTemp}°`;
+      
+          const weatherStateEl = document.getElementById("weatherState");
+          if (weatherStateEl) weatherStateEl.innerText = w.skyText;
+      
+          const weatherIconEl = document.getElementById("weatherIcon");
+          if (weatherIconEl) weatherIconEl.innerText = w.iconText;
+      
+          const updateEl = document.getElementById("updateTime");
+          if (updateEl) updateEl.innerText = `업데이트: ${new Date().toLocaleTimeString()}`;
+    }; 
+}
+
+weather();
+

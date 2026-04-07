@@ -9,7 +9,7 @@
     
 }
 
-/* ------------- 코디 스타일 5가지 --------------- */
+/* ------------- 서브메뉴 --------------- */
 .styleBtn {
     display: flex;
     margin-top: 13px;
@@ -18,24 +18,22 @@
 
 }
 
-.styleBtn>p {
-    width: 59px;
-    height: 27px;
-    border-radius: 23.5px;
+.styleBtn a{
+    border-radius: 50px;
     border: 1px solid rgb(238 238 238);
     font-size: 12px;
     text-align: center;
     justify-content: center;
-    padding: 5px;
+    padding: 5px 10px;
     
-    cursor: pointer;
     transition: 0.3s;
 }
 
-.styleBtn p.active {
+.styleBtn a.active {
     background-color: rgb(143, 235, 208);
     border: 1px solid #00CE93;
 }
+
 
 /* ------------------ 코디 보관함 스크랩되있을때---------------------- */
 .scrapItem {

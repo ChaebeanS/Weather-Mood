@@ -36,6 +36,7 @@
           onboarding.style.display='none'
           main.style.display='block';
           loadCharacter();
+          weather();
         });
 
 // ============================배경색 설정시 메인배경색 바뀌게===============================
