@@ -1120,10 +1120,10 @@ z-index:2;
 
 .onboarding button {
     margin-top: auto;
-    margin-bottom: 40px;
+    bottom: 40px;
     background-color: #EEEEEE;
     padding: 15px 0;
-    width: 359px;
+    width: 83vw;
     border-radius: 40px;
     color: #BDBDBD;
     border: none;
@@ -1134,10 +1134,10 @@ z-index:2;
 
 .onboarding button.active {
     margin-top: auto;
-    margin-bottom: 40px;
+    bottom: 40px;
     background-color: #00CE93;
     padding: 15px 0;
-    width: 359px;
+    width: 83vw;
     border-radius: 40px;
     color: white;
     border: none;
