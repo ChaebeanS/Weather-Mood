@@ -51,7 +51,7 @@
 
 .codi img { 
     width: 42vw;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 
 }
