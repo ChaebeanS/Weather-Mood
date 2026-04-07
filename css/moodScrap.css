@@ -37,7 +37,7 @@
 /* ------------------ 음악 보관함 스크랩되있을때---------------------- */
 
 .moodScrapContainer2{
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
     scrollbar-width: none;
@@ -48,12 +48,10 @@
     margin-top:10px;
 }
 
-.list{
-    position: relative;
-}
+.list{ position: relative; }
 .list img {
-    width: 174px;
-    height: 228px;
+    width: 42vw;
+    height: auto;
     object-fit: cover;
 }
 

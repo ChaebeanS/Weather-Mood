@@ -49,22 +49,19 @@
 }
 
 .scrapItem img {
-    width: 174px;
-    height: 228px;
+    width: 42vw;
+    height: auto;
     object-fit: cover;
     
 }
 
 /* ------------------ 코디 보관함 빈공간일때---------------------- */
-.empty {display: flex; position: relative;height: 550px;}
-
-.empty span{font-size:14px;color:#888888;
+.scrapItem span{font-size:14px;color:#888888;
     position:absolute;text-align: center;
     line-height: 1.4;
-    top:30.9%;left:50%;transform: translate(-50%,-50%);
+    top:53%;left:50%;transform: translate(-50%,-50%);
     white-space: nowrap;
 }
-
 /* ------------ 코디 사진 팝업창 ------------- */
 aside {
     width: 360px;

@@ -1,48 +1,52 @@
-const loadScrap = async function () {
+let dataFilter = [];
+let loadScrap = async function () {
     const res = await fetch('./js/codi.json');
     const data = await res.json();
-
-    // 로컬스토리지 데이터 가져오기
+    
     let scrapId = JSON.parse(localStorage.getItem('scrapList')) || [];
-    let scrapGender = localStorage.getItem('gender') || 'man'; // 기본값 설정
+    let scrapGender = localStorage.getItem('gender') || 'man'; 
     
     const scrapItem = document.querySelector('.scrapItem');
-    const empty = document.querySelector('.empty');
-    let dataFilter = [];
+    
+    dataFilter = [];
 
-    // 스크랩된 ID와 일치하는 아이템 추출
-    scrapId.forEach(ss => {
-        for (let style in data[scrapGender]) {
-            for (let season in data[scrapGender][style]) {
-                data[scrapGender][style][season].forEach(item => {
-                    if (String(ss) === String(item.id)) {
-                        dataFilter.push(item);
+    let saveIdFun = function () {
+        scrapId.forEach(ss => {
+            if (data[scrapGender]) {
+                for (let style in data[scrapGender]) {
+                    for (let season in data[scrapGender][style]) {
+                        data[scrapGender][style][season].forEach(item => {
+                            if (String(ss) === String(item.id)) {
+                                dataFilter.push(item);
+                            }
+                        });
                     }
-                });
+                }
             }
-        }
-    });
-
-    
-    scrapItem.innerHTML = '';
-    
-    if (dataFilter.length > 0) {
-        
-        dataFilter.forEach(v => {
-            scrapItem.innerHTML += `
-                <img src="${v.src}" alt="" 
-                     data-id="${v.id}"
-                     data-top="${v.top}" 
-                     data-bottom="${v.bottom}">`;
         });
-    } else {
-        scrapItem.style.display = 'none';
-        empty.style.display = 'block';
-        empty.innerHTML = `<span>보관함이 비어 있습니다.</span>`;
     }
-};
+    saveIdFun();
 
-// 페이지 로드 시 즉시 실행
+    let printImgFun = function () {
+        scrapItem.innerHTML = ''; 
+
+        if (dataFilter.length > 0) {
+            dataFilter.forEach(v => {
+                scrapItem.innerHTML += `
+                    <img src="${v.src}" alt="" 
+                         data-id="${v.id}"
+                         data-top="${v.top}" 
+                         data-bottom="${v.bottom}">`;   
+            });
+        } else {
+            scrapItem.innerHTML = `<span>아직 저장한 코디가 없어요!</span>`;
+        }
+        
+        if (typeof popupFun === 'function') popupFun();
+    }
+    printImgFun();
+}
+
 loadScrap();
 
 // 모달 팝업 =========================

@@ -29,7 +29,7 @@ let loadScrap = async function () {
             dataFilter.forEach(function (v, i) {     
                 console.log(i)
             scrapItem.innerHTML += `<div class="list"
-                            style="background: url(${v.src}) 0 0 / cover no-repeat fixed;" data-id="${v.id}">                        
+                            style="background: url(${v.src}) 0 0 / cover no-repeat;" data-id="${v.id}">                        
                             <img src="./image/mood/LP_bg 1.png" alt="">
                             <p >${v['lp-txt']}</p></div>`   
             })

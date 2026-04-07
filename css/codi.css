@@ -50,8 +50,8 @@
 }
 
 .codi img { 
-    width: 174px;
-    height: 228px;
+    width: 42vw;
+    height: auto;
     object-fit: cover;
 
 }
