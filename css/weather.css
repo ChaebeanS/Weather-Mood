@@ -237,7 +237,11 @@
     
 }
 
-@media (max-width: 768px){
+@media (min-width: 481px) and (max-width: 1280px){
+
+}
+
+@media (max-width: 480px){
 
 body{ background: linear-gradient(to bottom, #CFFFF1 0%, #00CE93 77%, #12A77C 100%); }
 .app{ 
