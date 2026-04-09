@@ -605,7 +605,13 @@ z-index:2;
 
 /* =========================중간컨텐츠======================== */
 
-.weather {position:relative; width: 30%;}
+.weather {
+    position:relative; 
+    width: 50%;
+    transform: scale(0.9);
+    left:-8%;
+    top: -50px;
+}
 .weather >div{display: none;}
 .weather >div.active{display: block;}
 

@@ -323,7 +323,9 @@
 /* 툴 */
 .tool{
     position: absolute;
-    transform: translate(-210%, 200%);
+    left: 0;
+    top: 0;
+    transform: translate(20%, 250%);
     text-align: left;
     opacity: 0;
 }
