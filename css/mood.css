@@ -263,7 +263,7 @@ aside{
 }
 
 aside .title span img{width: 20px; height: 20px;}
-aside .title p{font-size: 20px; font-weight: bold; margin-left: 3px;}
+aside .title p{font-size: 0.9em; font-weight: bold; margin-left: 3px;}
 aside .title{
     display: flex;
     align-items: center;

@@ -244,15 +244,12 @@ aside .title{
     height: 77vh;
     align-content: flex-start;
     padding:0 1px;
-    margin-top:10px;
+    width: 100%;
+    margin:0 auto;
 }
 
-.list{ position: relative; }
-.list img {
-    width: 42vw;
-    aspect-ratio: 1/1.3;
-    object-fit: cover;
-}
+.list{ position: relative; width: 48%; aspect-ratio: 1/1.3;}
+.list img { width: 100%; object-fit: cover; }
 
 .list p{
     width: 100%;
@@ -281,8 +278,8 @@ aside .title{
 /* ------------ 플레이리스트 팝업창 -------------*/
 
 aside{
-    width: 360px;
-    height: 580px;
+    width: 85%;
+    aspect-ratio: 1/1.65;
     background-color: #ffffff;
     border-radius: 20px;
     flex-direction: column;
@@ -300,19 +297,20 @@ aside{
     z-index: 20000;
 }
 .modal-video{
-  width: 320px; height: 230px;
+  width: 86.5%;
   object-fit: cover; 
   display: block;
-  margin: 20px 21px auto; 
+  margin: 20px 21px auto;
 }
 
 aside .title span img{width: 20px; height: 20px;}
-aside .title p{font-size: 20px; font-weight: bold; margin-left: 10px;}
+aside .title p{font-size: 0.9em; font-weight: bold; margin-left: 10px;}
 aside .title{
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 20px 20px 0 20px;
 }
 
 /* 버튼 */
@@ -446,12 +444,8 @@ aside .title{
     margin: 0 auto;  
 }
 
-.list{ position: relative; }
-.list img {
-    width: 40%;
-    aspect-ratio: 1/1.3;
-    object-fit: cover;
-}
+.list{ position: relative; width: 48.3%; aspect-ratio: 1/1.3; }
+.list img { width: 100%; object-fit: cover; }
 
 .list p{
     width: 100%;
