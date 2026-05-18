@@ -134,7 +134,7 @@
 /* 툴 */
 .tool{
     position: absolute;
-    transform: translate(-210%, 200%);
+    transform: translate(-180%, 200%);
     text-align: left;
     opacity: 0;
 }
@@ -154,12 +154,13 @@
 .tool div span{
     margin-right: 10px;
     font-size:20px; 
-    font-weight: 800;
+    font-weight: 650;
 }
-.tool div span:nth-of-type(1){color: #31a8ff; }
-.tool div span:nth-of-type(2){color: #f19a00; }
+.tool div span:nth-of-type(1){color: #31a8ff; font-weight: 800; }
+.tool div span:nth-of-type(2){color: #f19a00; font-weight: 800; }
 .tool div span:nth-of-type(4),
-.tool div span:nth-of-type(5){color: gray; }
+.tool div span:nth-of-type(5),
+.tool div span:nth-of-type(6){color: gray; }
 
 
 /* 대사 */
@@ -325,7 +326,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    transform: translate(20%, 250%);
+    transform: translate(30%, 300%);
     text-align: left;
     opacity: 0;
 }
@@ -344,13 +345,14 @@
 
 .tool div span{
     margin-right: 10px;
-    font-size:20px; 
+    font-size:16px; 
     font-weight: 800;
 }
-.tool div span:nth-of-type(1){color: #31a8ff; }
-.tool div span:nth-of-type(2){color: #f19a00; }
+.tool div span:nth-of-type(1){color: #31a8ff; font-size:20px; }
+.tool div span:nth-of-type(2){color: #f19a00; font-size:20px; }
 .tool div span:nth-of-type(4),
-.tool div span:nth-of-type(5){color: gray; }
+.tool div span:nth-of-type(5),
+.tool div span:nth-of-type(6){color: gray; }
 
 
 /* 대사 */
