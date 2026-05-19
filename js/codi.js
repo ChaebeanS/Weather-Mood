@@ -36,7 +36,7 @@
           el_Btn.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
 
-          const tab = btn.innerText.trim();
+          const tab = btn.innerText;
           const season = getSeasonByTemp(currentTempGlobal);
           
 

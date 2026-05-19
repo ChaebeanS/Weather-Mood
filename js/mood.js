@@ -116,8 +116,6 @@ let dataJson = async function () {
                                 </div>
                                 </li>`;
     });
-
-
 }
 
 dataJson();
