@@ -134,7 +134,9 @@
 /* 툴 */
 .tool{
     position: absolute;
-    transform: translate(-180%, 200%);
+    transform: translate(85%, 150%);
+    top: 100%;
+    left: 0;
     text-align: left;
     opacity: 0;
 }
