@@ -50,13 +50,14 @@
 }
 
 .codi img { 
-    width: 9vw;
+    width: 100%;
     aspect-ratio: 1/1.3;
     object-fit: cover;
 }
 
 .codi p {
     margin: 0;
+    width: 48%;
 }
 
 
@@ -239,7 +240,6 @@ aside.active{
     flex-wrap: wrap;
     gap: 10px;
     overflow-y: auto;
-    height: 77vh;
     scrollbar-width: none;
     padding: 0 1px; 
     width: 100%;
@@ -250,10 +250,12 @@ aside.active{
     width: 100%;
     aspect-ratio: 1/1.3;
     object-fit: cover;
-
 }
 
-.codi p{ width: 48%; margin: 0 auto; }
+.codi p{ 
+    width: 48%; 
+    margin: 0 auto; 
+}
 
 
 /* ------------ 코디 사진 팝업창 ------------- */

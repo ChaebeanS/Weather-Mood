@@ -9,7 +9,7 @@
 
     let imgData = null;
 
-    let currentTempGlobal = 9; // 기본값
+    let currentTempGlobal = JSON.parse(localStorage.getWeatherAll).temp || 9; // 기본값
     
     window.getSeasonByTemp = function (temp) {
       temp = Number(temp);
@@ -36,10 +36,11 @@
           el_Btn.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
 
-          const tab = btn.innerText;
+          const tab = btn.innerText.trim();
           const season = getSeasonByTemp(currentTempGlobal);
           
-
+          console.log(season);
+          
           el_Img.innerHTML = '';
 
           // 성별
